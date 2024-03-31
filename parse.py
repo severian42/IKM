@@ -4,7 +4,7 @@ from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 from collections import defaultdict
 
-# Ensure you've downloaded the necessary NLTK data
+
 # nltk.download('stopwords')
 # nltk.download('punkt')
 
@@ -32,7 +32,7 @@ def standardize_entry(entry):
 def extract_keywords(text):
     word_tokens = word_tokenize(text)
     filtered_words = [w for w in word_tokens if not w.lower() in stop_words]
-    return list(set(filtered_words))  # Return unique keywords
+    return list(set(filtered_words))  
 
 def enhance_linking_and_tagging(entries):
     all_keywords = defaultdict(list)
@@ -48,7 +48,7 @@ def enhance_linking_and_tagging(entries):
         related_entries = set()
         for keyword in shared_keywords:
             related_entries.update(all_keywords[keyword])
-        # Remove self-reference
+        
         related_entries.discard(entries.index(entry))
         entry["Related Entries"] = list(related_entries)
     return entries
@@ -67,7 +67,7 @@ def main():
     log_entries = read_jsonl_file(log_file_path)
     dataset_ikm3_entries = read_jsonl_file(dataset_ikm3_path)
     train_ikm2_entries = read_jsonl_file(train_ikm2_path)
-    extra_dataset_entries = read_jsonl_file(extra_dataset_path)  # Read the fourth file
+    extra_dataset_entries = read_jsonl_file(extra_dataset_path)  
 
     combined_entries = merge_and_process_datasets(log_entries, dataset_ikm3_entries, train_ikm2_entries, extra_dataset_entries)
     write_to_jsonl(combined_entries, output_file_path)
