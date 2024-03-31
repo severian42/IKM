@@ -13,7 +13,7 @@ stop_words = set(stopwords.words('english'))
 log_file_path = 'dataset-v1.jsonl'
 dataset_ikm3_path = 'dataset-IKM3.jsonl'
 train_ikm2_path = 'trainIKM2.jsonl'
-extra_dataset_path = 'extra_dataset.jsonl'  # Path for the fourth file
+extra_dataset_path = 'extra_dataset.jsonl'  
 output_file_path = 'combined_dataset.jsonl'
 
 def read_jsonl_file(file_path):
