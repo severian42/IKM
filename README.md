@@ -1,6 +1,6 @@
 # IKM
 
-A simple, powerful, minimal codebase to generate synthetic data using OpenAI
+A simple, powerful, minimal codebase to generate the Internal Knowledge Map dataset using OpenAI
 
 # How to run
 
