@@ -1,14 +1,12 @@
-# Sensei (先生)
-A simple, powerful, minimal codebase to generate synthetic data using OpenAI
+# IKM
 
-![alt text](Sensei.png)
+A simple, powerful, minimal codebase to generate synthetic data using OpenAI
 
 # How to run
 
 - `pip install openai numpy`
 - Change `GPT_MODEL`, `OPENAI_API_KEY` and `OUTPUT_FILE_PATH` under `params.py`
 - Run with `python main.py`
-- conda activate sensei
 
 # Optional
 
